@@ -293,8 +293,6 @@
       <id>release</id>
       <properties>
         <karaf.itest.skip>true</karaf.itest.skip>
-        <gpg.executable>gpg</gpg.executable>
-        <gpg.passphrase>${gpg.passphrase}</gpg.passphrase>
       </properties>
       <build>
         <plugins>
