@@ -93,6 +93,9 @@ RUN curl -L https://github.com/fabric8io/exposecontroller/releases/download/v$EX
   chmod +x exposecontroller && \
   mv exposecontroller /usr/bin/
 
+# install grab
+RUN curl -s https://raw.githubusercontent.com/shellib/grab/master/install.sh | bash
+
 # updatebot
 ENV UPDATEBOT_VERSION 1.0.5
 RUN curl -L http://central.maven.org/maven2/io/fabric8/updatebot/updatebot/$UPDATEBOT_VERSION/updatebot-$UPDATEBOT_VERSION.jar -o /usr/bin/updatebot && chmod +x /usr/bin/updatebot
