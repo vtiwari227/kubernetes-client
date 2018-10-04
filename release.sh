@@ -25,9 +25,10 @@ artifact_id_to_watch_in_central="kubernetes-client"
 git config --global user.email fabric8cd@gmail.com
 git config --global user.name fabric8-cd
 
-git clone https://github.com/fabric8io/cico-bash-library.git
+#git clone https://github.com/fabric8io/cico-bash-library.git
 
-source cico-bash-library/utils.sh
+#source cico-bash-library/utils.sh
+source utils.sh
 
 # stage
 output=$(stage_project)
