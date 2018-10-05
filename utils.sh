@@ -88,7 +88,7 @@ function get_repo_ids() {
 # check this
 function stage_sonatype_repo() {
     mvn clean -B
-    mvn -V -B -e -U install org.sonatype.plugins:nexus-staging-maven-plugin:1.6.7:deploy -P release -P openshift -DnexusUrl=https://oss.sonatype.org -DserverId=oss-sonatype-staging
+    mvn -V -B -e -U install org.sonatype.plugins:nexus-staging-maven-plugin:1.6.7:deploy -P release -DnexusUrl=https://oss.sonatype.org -DserverId=oss-sonatype-staging
     get_repo_ids
 }
 
