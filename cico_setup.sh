@@ -63,7 +63,7 @@ function setup() {
 }
 
 function build() {
-  docker exec $CID mvn clean install
+  docker exec $CID mvn clean install -DskipTests
 }
 
 function release() {
