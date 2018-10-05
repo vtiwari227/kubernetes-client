@@ -77,10 +77,12 @@ function get_new_ver_from_tag() {
 
 # check the logic of this for getting repo_id
 function get_repo_ids() {
-  find target/nexus-staging/staging/  -maxdepth 1 -name "*.properties" > target/nexus-staging/staging/repos.txt
-  filename=$(cat target/nexus-staging/staging/repos.txt)
-  repo_id=$(cat $filename)
+  find target/  -maxdepth 1 -name "*.properties" > target/repos.txt
+  filename=$(cat target/repos.txt)
+  repo_id=$filename
+  #repo_id=$(cat $filename)
   echo repo_id
+  exit 0
 }
 
 # check this
