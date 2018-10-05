@@ -67,7 +67,7 @@ function build() {
 }
 
 function release() {
-  docker exec -i $CID /bin/bash -c 'bash release.sh'
+  docker exec -i $CID /bin/bash -c 'bash release-2.sh'
 }
 
 function check_if_tagged() {
