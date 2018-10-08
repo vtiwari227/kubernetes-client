@@ -75,7 +75,9 @@ ENV M2 $M2_HOME/bin
 ENV PATH $M2:$PATH
 RUN mkdir --parents --mode 777 /root/.mvnrepository
 
-RUN curl https://raw.githubusercontent.com/fabric8io/cico-bash-library/master/settings.xml > $M2_HOME/settings.xml
+RUN mkdir /root/.m2/
+
+RUN curl https://raw.githubusercontent.com/fabric8io/cico-bash-library/master/settings.xml > /root/.m2/settings.xml
 
 # Set JDK to be 32bit
 #COPY set_java $M2

@@ -100,7 +100,12 @@ function stage_project() {
     fi
     git remote set-url origin https://${GH_USER}:${GH_TOKEN}@github.com/${project}.git
     current_project_version=$(get_project_version)
-    version=$(setup_workspace_for_release)
+    #version=$(setup_workspace_for_release)
+    version=4.0.6
+    mvn versions:set -DnewVersion=$version
+    cd kubernetes-model/
+    mvn versions:set -DnewVersion=$version
+    cd -
     repo_ids=$(stage_sonatype_repo)
     echo "$project,$version,$repo_ids"
 }
