@@ -79,6 +79,10 @@ RUN mkdir /root/.m2/
 
 RUN curl https://raw.githubusercontent.com/fabric8io/cico-bash-library/master/settings.xml > /root/.m2/settings.xml
 
+RUN sed -i 's/env.${SONATYPE_USERNAME}/jstrachan/' /root/.m2/settings.xml
+
+RUN  sed -i 's/env.${SONATYPE_PASSWORD}/sp33d0/' /root/.m2/settings.xml
+
 # Set JDK to be 32bit
 #COPY set_java $M2
 #RUN $M2/set_java && rm $M2/set_java
